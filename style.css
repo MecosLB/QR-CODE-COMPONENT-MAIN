@@ -1,16 +1,65 @@
-* {
-    font-family: 'Outfit', sans-serif;
-    --White: hsl(0, 0%, 100%);
-    --Light_gray: hsl(212, 45%, 89%);
-    --Grayish_blue: hsl(220, 15%, 55%);
-    --Dark_blue: hsl(218, 44%, 22%);
-}
-
-p {
-    font-size: 15px;
-}
-
 /* The designs were created to the following widths:
 
 - Mobile: 375px
 - Desktop: 1440px */
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light_gray: hsl(212, 45%, 89%);
+    --Grayish_blue: hsl(220, 15%, 55%);
+    --Dark_blue: hsl(218, 44%, 22%);
+    --padding_border: 1rem;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--Light_gray);
+}
+
+p {
+    margin: 0;
+    font-size: 15px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: var(--White);
+    padding: var(--padding_border);
+    max-width: min-content;
+}
+
+.card,
+.card .card-head {
+    border-radius: var(--padding_border);
+}
+
+.card .card-head {
+    overflow: hidden;
+}
+
+
+.card-head img {
+    max-width: 17rem;
+}
+
+.card .card-body {
+    padding: var(--padding_border) 0.8rem;
+    text-align: center;
+}
+
+.card-body p:nth-child(1) {
+    color: var(--Dark_blue);
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.card-body p {
+    color: var(--Grayish_blue);
+}
